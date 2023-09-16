@@ -67,10 +67,7 @@ export default function Home() {
                 <div className="px-6 py-3   text-center font-medium text-[#000]  rounded-full"> <img src={userData.avatar_url} alt="asd" width={250} className="rounded-full text-center" height={250} /></div>
               </div>
               <div className=" flex justify-around">
-                <div className="px-6 py-3 text-left text-1 font-small text-[#000] uppercase tracking-wider"> Name : {userData.name}</div>
-                <div className="px-6 py-3 text-left text-l font-medium text-[#000] uppercase tracking-wider"> Followers :{userData.followers}</div>
-                <div className="px-6 py-3 text-left text-l font-medium text-[#000] uppercase tracking-wider"> Following :{userData.following}</div>
-                <div className="px-6 py-3 text-left text-l font-medium text-[#000] uppercase tracking-wider"> Public repos : {userData.public_repos}</div>
+                <div className="px-6 py-3 text-left text-2xl font-small text-[#000] uppercase tracking-wider"> Name : {userData.name}</div>
               </div>
 
             </div>
@@ -100,7 +97,7 @@ export default function Home() {
             <table className="min-w-full">
               <thead>
                 <tr className="border-b  font-medium  border-[#000]">
-                  <th className="px-6 py-3 text-left text-base	 font-medium text-[#000] uppercase tracking-wider">#</th>
+                  <th className="px-6 py-3  text-left 	 font-medium text-[#000] uppercase text-3xl tracking-wider">#</th>
                   <th className="px-6 py-3 text-left text-3xl font-medium text-[#000] uppercase tracking-wider">Profile</th>
                   <th className="px-6 py-3 text-left text-3xl font-medium text-[#000] uppercase tracking-wider">Name</th>
                   <th className="px-6 py-3 text-left text-3xl font-medium text-[#000] uppercase tracking-wider">Followers</th>
@@ -113,49 +110,28 @@ export default function Home() {
 
               <tbody>
                 {data.map((userData, i) => (
-                  <tr key={i} className="border-b  font-medium  border-[#000]">
+                  <tr key={i} className="border-4 border-red-500/75  font-medium">
                     <th className="px-6 py-3 text-left text-1xl font-medium text-[#000] uppercase tracking-wider">{i + 1}</th>
-                    <th className="px-6 py-3 text-left text-1xl font-medium text-[#000] uppercase tracking-wider rounded-full"> <img src={userData.avatar_url} alt="asd" width={75} className="rounded-full" height={75} /></th>
-                    <th className="px-6 py-3 text-left text-1xl font-medium text-[#000] uppercase tracking-wider">{userData.login}</th>
-                    <th className="px-6 py-3 text-left text-1xl font-medium text-[#000] uppercase tracking-wider">{userData.followers}</th>
-                    <th className="px-6 py-3 text-left text-1xl font-medium text-[#000] uppercase tracking-wider">{userData.following}</th>
+                    <th className="px-6 py-3 text-left text-1xl border-4 border-red-500/75 font-medium text-[#000] uppercase tracking-wider rounded-full"> <img src={userData.avatar_url} alt="asd" width={75} className="rounded-full" height={75} /></th>
+                    <th className="px-6 py-3 text-left text-1xl border-4 border-red-500/75 font-medium text-[#000] uppercase tracking-wider">{userData.login}</th>
+                    <th className="px-6 py-3 text-center text-1xl font-medium text-[#000] uppercase border-4 border-red-500/75 tracking-wider">{userData.followers}</th>
+                    <th className="px-6 py-3 text-left text-1xl font-medium text-[#000] uppercase border-4 border-red-500/75 tracking-wider">{userData.following}</th>
             
 
                   </tr>
                 ))}
 
 
-                {/* {data.map((item, i) => (
-7
-                  <tr key={i} className="border-b  font-medium  border-[#33B1FF]">
-                    <th className="px-6 py-3 text-left text-xs font-medium text-[#33B1FF] uppercase tracking-wider">{i + 1}</th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-[#33B1FF] uppercase tracking-wider rounded-full"> <Image src={item.avatar_url} alt={adsf} width={75} height={75} /></th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-[#33B1FF] uppercase tracking-wider">{item.login}</th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-[#33B1FF] uppercase tracking-wider">{item.followers}</th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-[#33B1FF] uppercase tracking-wider">{item.following}</th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-[#33B1FF] uppercase tracking-wider">{item.public_repos}</th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-[#33B1FF] uppercase tracking-wider">{item.url}</th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-[#33B1FF] uppercase tracking-wider">Action</th>
-                  </tr>
-
-                ))} */}
+               
               </tbody>
 
             </table>
-
-
-            {/* <div className="flex  p-10">
-              <div className="px-10">
-                <img src={data.avatar_url} width={70} height={70} className='rounded-full' />
-              </div>
-              <div className="px-20"> {data.name}</div>
-              <div className="px-18">{data.followers}</div>
-              <div className="px-32">{data.following}</div>
-              <div className="px-32"> {data.public_repos}</div>
-              <div className="px-">{data.html_url}</div>
-            </div> */}
           </div>
         </div>
+        <h1 className="mt-10 py-10 px-20 text-2xl text-center">@Made By-Usman-Shahid</h1>
+        <br/>
+        <br/>
+        <br/>
       </div>
 
     </>
